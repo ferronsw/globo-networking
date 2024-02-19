@@ -3,9 +3,9 @@
 ##################################################################################
 
 variable "environment" {
-  type = string
+  type        = string
   description = "(optional) Environment name (e.g. 'prod', 'staging', 'dev' etc.)"
-  default = "dev"
+  default     = "dev"
 }
 
 variable "region" {
