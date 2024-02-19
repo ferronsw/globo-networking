@@ -20,3 +20,5 @@
 
 # .hcl files
 *.hcl
+
+backend_local.tf
