@@ -1,0 +1,37 @@
+##################################################################################
+# VARIABLES
+##################################################################################
+
+variable "environment" {
+  type = string
+  description = "(optional) Environment name (e.g. 'prod', 'staging', 'dev' etc.)"
+  default = "dev"
+}
+
+variable "region" {
+  type        = string
+  description = "(Optional) AWS Region to use. Default: eu-central-1"
+  default     = "eu-central-1"
+}
+
+variable "prefix" {
+  type        = string
+  description = "(Optional) Prefix to use for all resources in this module. Default: globo-dev"
+  default     = "globo-dev"
+}
+
+variable "cidr_block" {
+  type        = string
+  description = "(Optional) The CIDR block for the VPC. Default:10.42.0.0/16"
+  default     = "10.42.0.0/16"
+}
+
+variable "public_subnets" {
+  type        = map(string)
+  description = "(Optional) Map of public subnets to create with CIDR blocks. Key will be used as subnet name with prefix. Default: {subnet-1 ="
+  default = {
+    public-1 = "10.42.10.0/24"
+    public-2 = "10.42.11.0/24"
+  }
+}
+
