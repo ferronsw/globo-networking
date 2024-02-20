@@ -8,6 +8,12 @@ variable "environment" {
   default     = "dev"
 }
 
+variable "billing_code" {
+  type        = string
+  description = "(Required) Billing code for network resources"
+
+}
+
 variable "region" {
   type        = string
   description = "(Optional) AWS Region to use. Default: eu-central-1"
